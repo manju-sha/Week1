@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Master</title>
+    <link rel="stylesheet" href="searchstyle.css">
+</head>
+<body>
+
+<div class="search-container">
+    <h1>Search Master</h1>
+    <form class="search-form" onsubmit="event.preventDefault(); displayResults(document.getElementById('search-input').value);">
+        <input type="text" id="search-input" placeholder="What are you looking for?" oninput="showSuggestions(this.value)">
+        <button type="submit"><img width="25" src="search.png" alt="Search Icon"></button>
+        <div class="suggestions" id="suggestions"></div>
+    </form>
+</div>
+
+<div class="results">
+    <h2>Search Results</h2>
+    <div class="result-cards">
+        <!-- Dynamic search results will be displayed here -->
+    </div>
+</div>
+
+<script src="searchjs.js"></script>
+</body>
+</html>
